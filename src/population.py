@@ -5,7 +5,7 @@ from evaluable_trees import FunctionNode, ConstantNode, ParameterNode
 class PopulationProperties:
     def __init__(self, **options):
         self.parameter_count = options.get('parameter_count', 1)
-        self.max_depth = options.get('max_depth', 4)
+        self.max_depth = options.get('max_depth', 6)
         self.function_offset = options.get('function_offset', 0.5)
         self.parameter_offset = options.get('parameter_offset', 0.6)
 
@@ -19,6 +19,11 @@ class Population:
         self.parameter_count = population_properties.parameter_count
         self.max_depth = population_properties.max_depth
         self.individuals = []
+
+    # Creates the initial population
+    def populate(self):
+        population_size = self.population_size
+        self.individuals = [self.__create_tree_individual() for _ in range(population_size)]
 
     # Creates tree individual to fill a certain number of population
     # Should receive the remaining depth as option argument
