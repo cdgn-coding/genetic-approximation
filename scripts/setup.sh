@@ -9,7 +9,7 @@ echo "Registering pre-commit hook"
 
 # Create the hook if it doesnt exists
 filename=$path/../.git/hooks/pre-commit
-test -f $filename || touch $filename
+rm -f $filename
 
 # Copy pre-commit from source
-cp $path/pre-commit.sh $filename
+ln -s $path/pre-commit.sh $filename
