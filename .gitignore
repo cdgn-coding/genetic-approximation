@@ -1,2 +1,8 @@
 # Ignore virtual machine
 env
+
+# Ignore vscode folder
+.vscode
+
+# Ignore compiled sources
+*.pyc
