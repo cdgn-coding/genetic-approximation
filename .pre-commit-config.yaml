@@ -1,0 +1,6 @@
+-   id: save-requirements
+    name: Saving project requirements
+    description:
+    entry: bash ./scripts/save-requirements.sh
+    language: python
+    types: [text]
