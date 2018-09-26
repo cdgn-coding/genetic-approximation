@@ -1,5 +1,3 @@
 #!/bin/bash
 
-path="$( cd "$(dirname "$0")" ; pwd -P )"
-bash $path/save-requirements.sh
-
+bash ./scripts/save-requirements.sh
