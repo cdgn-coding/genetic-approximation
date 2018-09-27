@@ -25,6 +25,13 @@ class Population:
         population_size = self.population_size
         self.individuals = [self.__create_tree_individual() for _ in range(population_size)]
 
+    def set_generation(self, new_individuals):
+        self.individuals = new_individuals
+
+    # Public method for creating a node
+    def create_node(self):
+        return self.__create_tree_individual()
+
     # Creates tree individual to fill a certain number of population
     # Should receive the remaining depth as option argument
     def __create_tree_individual(self, **options):
