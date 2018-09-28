@@ -59,5 +59,5 @@ class Population:
 
         # From [parameter_offset, 1) selects a constant node
         else:
-            constant_value = randint(0, 10)
+            constant_value = randint(-9, 9)
             return ConstantNode(constant_value)

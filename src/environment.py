@@ -43,7 +43,11 @@ class Environment:
         create_new_probability = self.create_new_probability
         evolution = self.evolution
 
-        next_generation = []
+        # Best two always last
+        next_generation = [
+            ranked_individuals[0][0],
+            ranked_individuals[0][0]
+        ]
 
         for _ in range(population_size):
             if random() < create_new_probability: next_generation.append(
@@ -82,5 +86,6 @@ class Environment:
 
     def report_results(self):
         rankings = self.rank_individuals()
+        self.best_found = rankings[0][0]
         print '%s%d' % ('Best score found at the end: ', rankings[0][1])
-        rankings[0][0].debug()
+        self.best_found.debug()

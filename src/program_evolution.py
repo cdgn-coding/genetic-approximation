@@ -4,7 +4,7 @@ from evaluable_trees import FunctionNode
 
 class EvolutionProperties:
     def __init__(self, **options):
-        self.mutation_probability = options.get('mutation_probability', 0.1)
+        self.mutation_probability = options.get('mutation_probability', 0.7)
         self.generate_random_node = options.get('generate_random_node')
         self.swap_probability = options.get('swap_probability', 0.7)
 
