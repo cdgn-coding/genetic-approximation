@@ -27,7 +27,7 @@ python genetic-program.py
 
 ### Example
 
-For the function ```python target = lambda x: float(x**2 + 2x + 1)``` the output is:
+For the function ```target = lambda x: float(x**2 + 2x + 1)``` the output is:
 
 ```
 Current generation: 260, size: 102
